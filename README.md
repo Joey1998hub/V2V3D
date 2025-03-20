@@ -11,10 +11,10 @@ Moreover, we introduce an LFM dataset generated using two-photon excitation, inc
 Extensive experiments demonstrate that our unsupervised approach achieves high computational efficiency and outperforms the other state-of-the-art methods. These advancements position V2V3D as a promising solution for 3D imaging under challenging conditions.
 
 <div align="center">
-  <img src="figures/model.png"/>
+  <img src="figures/model.jpg"/>
 </div>
 <div align="center">
-  <img src="figures/panel.png"/>
+  <img src="figures/results.jpg"/>
 </div>
 
 ## Code and Dataset
