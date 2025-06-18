@@ -11,7 +11,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4B5563', // 修改为灰色
+                        primary: '#4B5563',
                         secondary: '#36BFFA',
                         dark: '#1D2939',
                         light: '#F9FAFB'
@@ -48,15 +48,27 @@
             <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-primary mb-4 text-shadow">
                 V2V3D: View-to-View Denoised 3D Reconstruction for Light-Field Microscopy
             </h1>
-            <p class="text-lg text-gray-700 mb-2">Jiayin Zhao, Zhenqi Fu, Tao Yu, Hui Qiao</p>
-            <p class="text-lg text-gray-700">Tsinghua University & Shanghai AI Laboratory</p>
+            <!-- 作者信息 -->
+            <div class="mb-6">
+                <p class="text-lg text-gray-700 mb-1">
+                    <span class="relative inline-block">Jiayin Zhao<sup>*</sup></span>, 
+                    <span class="relative inline-block">Zhenqi Fu<sup>*</sup></span>, 
+                    <span class="relative inline-block">Tao Yu<sup>†</sup></span>, 
+                    <span class="relative inline-block">Hui Qiao<sup>†</sup></span>
+                </p>
+                <p class="text-lg text-gray-700">Tsinghua University & Shanghai AI Laboratory</p>
+                <p class="text-sm text-gray-500 mt-2">
+                    <sup>*</sup>These authors contributed equally to this work. 
+                    <sup>†</sup>Corresponding authors: Tao Yu, Hui Qiao
+                </p>
+            </div>
             
-            <!-- 新增：链接按钮 -->
+            <!-- 链接按钮 -->
             <div class="flex flex-wrap justify-center gap-4 mt-8">
-                <a href="#" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg flex items-center transition-all card-hover">
+                <a href="https://arxiv.org/abs/2504.07853" target="_blank" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg flex items-center transition-all card-hover">
                     <i class="fa fa-file-pdf-o mr-2"></i> arXiv Paper
                 </a>
-                <a href="#" class="bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-lg flex items-center transition-all card-hover">
+                <a href="https://github.com/Joey1998hub/V2V3D" target="_blank" class="bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-lg flex items-center transition-all card-hover">
                     <i class="fa fa-github mr-2"></i> Source Code
                 </a>
                 <button class="bg-gray-300 text-gray-600 px-6 py-3 rounded-lg flex items-center cursor-not-allowed" disabled>
@@ -75,8 +87,8 @@
             </p>
         </section>
 
-        <!-- 图片展示 -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <!-- 图片展示 - 纵向排列 -->
+        <section class="space-y-6 mb-12">
             <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                 <img src="figures/model.jpg" alt="V2V3D模型架构图" class="w-full h-auto">
                 <div class="p-4 text-center">
@@ -96,13 +108,13 @@
             <h2 class="text-2xl font-bold text-primary mb-4">Code and Dataset</h2>
             <div class="space-y-6">
                 <div class="flex items-start">
-                    <div class="bg-primary/10 p-3 rounded-lg mr-4">
-                        <i class="fa fa-github text-2xl text-primary"></i>
+                    <div class="bg-secondary/10 p-3 rounded-lg mr-4">
+                        <i class="fa fa-github text-2xl text-secondary"></i>
                     </div>
                     <div>
                         <h3 class="font-bold text-lg">Source Code</h3>
                         <p class="text-gray-700">Our implementation code is publicly available on GitHub.</p>
-                        <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center mt-1">
+                        <a href="https://github.com/Joey1998hub/V2V3D" target="_blank" class="text-secondary hover:text-secondary/80 font-medium flex items-center mt-1">
                             <span>View on GitHub</span>
                             <i class="fa fa-arrow-right ml-2"></i>
                         </a>
@@ -115,7 +127,7 @@
                     </div>
                     <div>
                         <h3 class="font-bold text-lg">Dataset</h3>
-                        <p class="text-gray-700">The LFM dataset generated using two-photon excitation is currently being整理中, and will be released soon.</p>
+                        <p class="text-gray-700">The LFM dataset generated using two-photon excitation is currently under preparation and will be released soon.</p>
                         <p class="text-gray-500 italic">*We appreciate your patience.*</p>
                     </div>
                 </div>
@@ -128,5 +140,4 @@
         </footer>
     </div>
 </body>
-</html>
-    
+</html>    
