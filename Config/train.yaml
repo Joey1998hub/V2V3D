@@ -1,0 +1,11 @@
+gpu_id: 0
+psf_dir: "PSF/PSF_zoom2_39dz1_N13"
+lf_dir: "Dataset/Syndata1618_gauss0.01"
+Nnum: 13
+input_size: 128
+feat_ch: 4
+dc_weight: 1e-2
+tv_weight: 1e-3
+lr_init: 8e-5
+decay_init: 60
+decay_every: 20

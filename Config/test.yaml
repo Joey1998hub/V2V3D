@@ -1,0 +1,8 @@
+gpu_id: 0
+psf_dir: "PSF/PSF_zoom2_39dz1_N13"
+lf_dir: "Dataset/Syndata_Neutrophil_gauss0.01"
+model_path: "Checkpoints/V2V3D_F4_Syndata_gauss0.01/epoch_79.mdl"
+Nnum: 13
+input_size: 256
+feat_ch: 4
+use_amp: True
