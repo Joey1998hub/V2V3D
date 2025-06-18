@@ -16,6 +16,7 @@ Tsinghua University & Shanghai AI Laboratory
 * If you want to train the network with your LFM data, place the input LFs into `./Dataset/` and the PSFs into `./PSF/` .
 
 #### Test:
+* Set the hyper-parameters in `./Config/test.yaml` if needed. We have provided our default settings in the realeased codes.
 * Place the input LFs folder into `./Dataset` .
 * If you want to use our pre-trained model for testing on the provided LF, download the model via: https://drive.google.com/drive/folders/1UiFG8ChsjGmIZcVV4jzQd0aIcnIvvuEc?usp=sharing
 * Run `test_model.py` to perform inference on LFs selected in `dataset.py`.
