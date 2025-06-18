@@ -1,63 +1,132 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GitHub Pages from Markdown</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 40px auto;
-            max-width: 1000px;
-            padding: 0 10px;
+    <title>V2V3D: View-to-View Denoised 3D Reconstruction for Light-Field Microscopy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4B5563', // 修改为灰色
+                        secondary: '#36BFFA',
+                        dark: '#1D2939',
+                        light: '#F9FAFB'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
         }
-        h1, h2, h3 {
-            line-height: 1.2;
-        }
-        pre {
-            background-color: #f6f8fa;
-            border-radius: 3px;
-            font-size: 85%;
-            line-height: 1.45;
-            overflow: auto;
-            padding: 16px;
-        }
-        code {
-            background-color: rgba(27,31,35,.05);
-            border-radius: 3px;
-            font-size: 85%;
-            margin: 0;
-            padding: .2em .4em;
-        }
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
         }
     </style>
 </head>
-<body>
-<h1>V2V3D: View-to-View Denoised 3D Reconstruction for Light-Field Microscopy</h1>
-<p>Jiayin Zhao, Zhenqi Fu, Tao Yu, Hui Qiao</p>
-<p>Tsinghua University &amp; Shanghai AI Laboratory</p>
-<h2>Abstract:</h2>
-<p>Light field microscopy (LFM) has gained significant attention due to its ability to capture snapshot-based, large-scale 3D fluorescence images. However, current LFM reconstruction algorithms are highly sensitive to sensor noise and lack robustness when applied to experimental data. To address these challenges, this paper presents an unsupervised view-to-view LFM 3D reconstruction framework, named V2V3D. Unlike existing methods that directly use all views for reconstruction, V2V3D divides the views into two subsets, with each subset generating corresponding volumes and working together to effectively remove sensor noise. To enhance the recovery of high-frequency details, we propose a novel wave-optics-based feature alignment technique, which transforms the point spread function, used for forward propagation in wave optics, into convolution kernels specifically designed for feature alignment. 
-Moreover, we introduce an LFM dataset generated using two-photon excitation, including both the light field images and the corresponding 3D intensity volumes. 
-Extensive experiments demonstrate that our unsupervised approach achieves high computational efficiency and outperforms the other state-of-the-art methods. These advancements position V2V3D as a promising solution for 3D imaging under challenging conditions.</p>
-<div align="center">
-  <img src="figures/model.jpg" style="width: 1000px; height: auto;" />
-</div>
-<div align="center">
-  <img src="figures/results.jpg" style="width: 1000px; height: auto;" />
-</div>
+<body class="font-inter bg-gray-50 text-dark">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        <!-- 标题部分 -->
+        <header class="text-center mb-12">
+            <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-primary mb-4 text-shadow">
+                V2V3D: View-to-View Denoised 3D Reconstruction for Light-Field Microscopy
+            </h1>
+            <p class="text-lg text-gray-700 mb-2">Jiayin Zhao, Zhenqi Fu, Tao Yu, Hui Qiao</p>
+            <p class="text-lg text-gray-700">Tsinghua University & Shanghai AI Laboratory</p>
+            
+            <!-- 新增：链接按钮 -->
+            <div class="flex flex-wrap justify-center gap-4 mt-8">
+                <a href="#" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg flex items-center transition-all card-hover">
+                    <i class="fa fa-file-pdf-o mr-2"></i> arXiv Paper
+                </a>
+                <a href="#" class="bg-secondary hover:bg-secondary/90 text-white px-6 py-3 rounded-lg flex items-center transition-all card-hover">
+                    <i class="fa fa-github mr-2"></i> Source Code
+                </a>
+                <button class="bg-gray-300 text-gray-600 px-6 py-3 rounded-lg flex items-center cursor-not-allowed" disabled>
+                    <i class="fa fa-database mr-2"></i> Dataset (Coming Soon)
+                </button>
+            </div>
+        </header>
 
-<h2>Code and Dataset</h2>
-<p>Our code and dataset will be made publicly available soon.</p>
+        <!-- 摘要部分 -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-primary mb-4">Abstract</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Light field microscopy (LFM) has gained significant attention due to its ability to capture snapshot-based, large-scale 3D fluorescence images. However, current LFM reconstruction algorithms are highly sensitive to sensor noise and lack robustness when applied to experimental data. To address these challenges, this paper presents an unsupervised view-to-view LFM 3D reconstruction framework, named V2V3D. Unlike existing methods that directly use all views for reconstruction, V2V3D divides the views into two subsets, with each subset generating corresponding volumes and working together to effectively remove sensor noise. To enhance the recovery of high-frequency details, we propose a novel wave-optics-based feature alignment technique, which transforms the point spread function, used for forward propagation in wave optics, into convolution kernels specifically designed for feature alignment. 
+                Moreover, we introduce an LFM dataset generated using two-photon excitation, including both the light field images and the corresponding 3D intensity volumes. 
+                Extensive experiments demonstrate that our unsupervised approach achieves high computational efficiency and outperforms the other state-of-the-art methods. These advancements position V2V3D as a promising solution for 3D imaging under challenging conditions.
+            </p>
+        </section>
+
+        <!-- 图片展示 -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                <img src="figures/model.jpg" alt="V2V3D模型架构图" class="w-full h-auto">
+                <div class="p-4 text-center">
+                    <p class="font-medium">V2V3D Framework Architecture</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                <img src="figures/results.jpg" alt="重建结果对比图" class="w-full h-auto">
+                <div class="p-4 text-center">
+                    <p class="font-medium">Reconstruction Results Comparison</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 代码和数据集 -->
+        <section class="bg-white rounded-xl shadow-lg p-8 mb-12">
+            <h2 class="text-2xl font-bold text-primary mb-4">Code and Dataset</h2>
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                        <i class="fa fa-github text-2xl text-primary"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Source Code</h3>
+                        <p class="text-gray-700">Our implementation code is publicly available on GitHub.</p>
+                        <a href="#" class="text-primary hover:text-primary/80 font-medium flex items-center mt-1">
+                            <span>View on GitHub</span>
+                            <i class="fa fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="flex items-start">
+                    <div class="bg-gray-100 p-3 rounded-lg mr-4">
+                        <i class="fa fa-database text-2xl text-gray-500"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Dataset</h3>
+                        <p class="text-gray-700">The LFM dataset generated using two-photon excitation is currently being整理中, and will be released soon.</p>
+                        <p class="text-gray-500 italic">*We appreciate your patience.*</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="text-center text-gray-500 py-6 border-t border-gray-200">
+            <p>&copy; 2025 V2V3D Project Team. All rights reserved.</p>
+        </footer>
+    </div>
 </body>
 </html>
+    
