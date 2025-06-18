@@ -11,9 +11,9 @@ Tsinghua University & Shanghai AI Laboratory
 
 #### Train:
 * Set the hyper-parameters in `./Config/train.yaml` if needed. We have provided our default settings in the realeased codes.
+* Place the input LFs folder into `./Dataset` and the PSFs into `./PSF/` .
 * Run `train_model.py` to perform network training.
 * Checkpoint will be saved to `./Checkpoints/`.
-* If you want to train the network with your LFM data, place the input LFs into `./Dataset/` and the PSFs into `./PSF/` .
 
 #### Test:
 * Set the hyper-parameters in `./Config/test.yaml` if needed. We have provided our default settings in the realeased codes.
