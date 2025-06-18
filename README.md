@@ -1,7 +1,7 @@
 # V2V3D: View-to-View Denoised 3D Reconstruction for Light-Field Microscopy
 This is the official repository for our paper: "V2V3D: View-to-View Denoised 3D Reconstruction for Light-Field Microscopy."
 
-Jiayin Zhao, Zhenqi Fu, Tao Yu, Hui Qiao
+Jiayin Zhao*, Zhenqi Fu*, Tao Yu, Hui Qiao
 
 Tsinghua University & Shanghai AI Laboratory
 
@@ -20,3 +20,6 @@ Tsinghua University & Shanghai AI Laboratory
 * If you want to leverage our pre-trained model for testing on the provided LF, kindly download the model via: https://drive.google.com/drive/folders/1UiFG8ChsjGmIZcVV4jzQd0aIcnIvvuEc?usp=sharing
 * Run `test_model.py` to perform inference on LFs selected in `dataset.py`.
 * The result files will be saved to `./Results`.
+
+#### Notes:
+* We are organizing the relevant dataset and will release it as soon as possible. Meanwhile, we will continue to update and improve this repository.
