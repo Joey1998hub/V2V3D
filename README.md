@@ -22,4 +22,5 @@ Tsinghua University & Shanghai AI Laboratory
 * The result files will be saved to `./Results`.
 
 #### Notes:
-* We are organizing the relevant dataset and will release it as soon as possible. Meanwhile, we will continue to update and improve this repository.
+* We are organizing the relevant dataset and will release it as soon as possible.
+* We will continue to update and improve this repository.
