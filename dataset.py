@@ -43,7 +43,7 @@ class SyntheticData(Dataset):
     def getTestLF(self,select_all):
 
         self.test_lf_names = [
-            'Immune_cells_Neutrophil_highNA_zoom2_avg10_dz1um_slices39_energy10%_gain1-0.6-234-0.7_00002_00001_019_000_00_00_fp',
+            'Immune_cells_Neutrophil',
             ]
         
         if not select_all: self.test_lf_names = [self.test_lf_names[3]]
