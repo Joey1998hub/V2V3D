@@ -21,7 +21,9 @@ Tsinghua University & Shanghai AI Laboratory
 * If you want to use our pre-trained model for testing on the provided LF, download the model via: https://drive.google.com/drive/folders/1UiFG8ChsjGmIZcVV4jzQd0aIcnIvvuEc?usp=sharing
 * Run `test_model.py` to perform inference on LFs selected in `dataset.py`.
 * The result files will be saved to `./Results`.
+  
+#### Dataset:
+* We have open-sourced the relevant dataset. For details, please refer to: https://doi.org/10.57760/sciencedb.27695
 
 #### Notes:
-* We are organizing the relevant dataset and will release it soon.
 * We will continue to update and improve this repository.
